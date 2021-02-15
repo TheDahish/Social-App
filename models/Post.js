@@ -5,6 +5,7 @@ const postSchema = new Schema({
   username: String,
   createdAt: String,
   body: String,
+  threadName:String,
   comments: [
     {
       body: String,
@@ -19,7 +20,8 @@ const postSchema = new Schema({
     },
   ],
   user: {
-    typr: Schema.Types.ObjectId,
+    type: Schema.Types.ObjectId,
+    ref: 'users'
   },
 });
 
